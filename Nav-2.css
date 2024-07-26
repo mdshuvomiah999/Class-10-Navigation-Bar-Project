@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Asap:ital,wght@0,100..900;1,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hind:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: #222831;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 14vh;
+  color: white;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.container .logo {
+  display: inline-block;
+  /* margin-left: 20px; */
+  padding: 2px 12px;
+  border-radius: 1px;
+  font-size: 27px;
+  margin-right: 5px;
+  font-weight: 700;
+  background-color: crimson;
+  font-family: "Exo", sans-serif;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+}
+
+ul li {
+  padding: 0 10px;
+  list-style: none;
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+}
+.active {
+  /* margin-left: 10px; */
+}
+ul li a:hover,
+.active {
+  display: inline-block;
+  border-radius: 2px;
+  padding: 8px 14px;
+  background-color: #00adb5;
+}
+.drop-down-menu-1 {
+  display: none;
+}
+
+ul li:hover .drop-down-menu-1 {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: block;
+  background-color: #222831;
+  border-radius: 0 0 0 5px;
+}
+.drop-down-menu-1 ul li:hover {
+  cursor: pointer;
+  color: #00adb5;
+}
+
+.drop-down-menu-1 ul {
+  display: block;
+  margin: 9px;
+  /* height: 124px; */
+  height: auto;
+}
+
+.drop-down-menu-1 ul li {
+  padding: 10px;
+  /* height: 40px; */
+  height: auto;
+  width: 100px;
+  border-bottom: 0.5px solid white;
+}
+.drop-down-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+ul li:hover .fa-caret-down {
+  transform: scale(1.2);
+}
+.fa-caret-right {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.right-2 {
+  position: absolute;
+  margin-left: 3px;
+}
+.drop-down-menu-2 {
+  display: none;
+}
+
+.drop-down-menu-1 ul li:hover .drop-down-menu-2 {
+  display: block;
+  background-color: #222831;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  border-radius: 0px 5px 5px 5px;
+  color: white;
+}
+
+/* .drop-down-menu-3 {
+  height: 170px;
+}
+.drop-down-menu-4 {
+  height: 165px;
+}
+
+.drop-down-menu-5 {
+  height: 300px;
+} */
+
+header::before {
+  /* background: url(https://p2-ofp.static.pub/ShareResource/ww/img/homepage-banners/lenovo-thinkpad-x1-carbon-gen-12-14-intel-hpb-desktop-2.jpg)
+    no-repeat center/cover; */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: slide 40s infinite;
+  opacity: 0.9;
+  /* filter: blur(1px); */
+}
+
+section {
+  /* height: 90vh; */
+  /* background-image: url(https://p2-ofp.static.pub/ShareResource/ww/img/homepage-banners/lenovo-thinkpad-x1-carbon-gen-12-14-intel-hpb-desktop-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  height: 300px;
+  margin-top: 3px 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Exo", sans-serif;
+  color: white;
+}
+h1 {
+  color: white;
+
+  font-size: 3em;
+  font-family: "Exo", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+section p {
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+.box {
+  /* margin: 300px auto; */
+  border: 2px solid crimson;
+  /* height: 300px;
+  width: 450px; */
+  height: 90vh;
+  /* animation: slide 40s infinite; */
+}
+
+@keyframes slide {
+  0% {
+    background-image: url(/Images/Laptop-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  10% {
+    background-image: url(/Images/Laptop-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  20% {
+    background-image: url(/Images/Laptop-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  30% {
+    background-image: url(/Images/Laptop-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  40% {
+    background-image: url(/Images/Laptop-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  50% {
+    background-image: url(/Images/Laptop-6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  60% {
+    background-image: url(/Images/Laptop-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  70% {
+    background-image: url(/Images/Laptop-8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  80% {
+    background-image: url(/Images/Laptop-9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  90% {
+    background-image: url(/Images/Laptop-10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background-image: url(/Images/Laptop-11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
